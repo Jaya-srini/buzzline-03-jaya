@@ -1,4 +1,4 @@
-# buzzline-03-case
+# buzzline-03-jaya
 
 Streaming data does not have to be simple text.
 Many of us are familiar with streaming video content and audio (e.g. music) files. 
@@ -32,8 +32,6 @@ Follow the instructions in [MANAGE-VENV.md](https://github.com/denisecase/buzzli
 
 ## Task 4. Start Zookeeper and Kafka (2 Terminals)
 
-If Zookeeper and Kafka are not already running, you'll need to restart them.
-See instructions at [SETUP-KAFKA.md] to:
 
 1. Start Zookeeper Service ([link](https://github.com/denisecase/buzzline-02-case/blob/main/docs/SETUP-KAFKA.md#step-7-start-zookeeper-service-terminal-1))
 2. Start Kafka ([link](https://github.com/denisecase/buzzline-02-case/blob/main/docs/SETUP-KAFKA.md#step-8-start-kafka-terminal-2))
@@ -43,21 +41,11 @@ See instructions at [SETUP-KAFKA.md] to:
 In VS Code, open a terminal.
 Use the commands below to activate .venv, and start the producer. 
 
-Windows:
-
-```shell
-.venv\Scripts\activate
-py -m producers.json_producer_case
-```
-
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m producers.json_producer_case
+python3 -m producers.json_producer_jaya
 ```
-
-What did we name the topic used with JSON data? 
-Hint: See the producer code and [.env](.env).
 
 ## Task 6. Start a JSON Consumer
 
@@ -66,16 +54,10 @@ Consumers process streaming data in real time.
 In VS Code, open a NEW terminal in your root project folder. 
 Use the commands below to activate .venv, and start the consumer. 
 
-Windows:
-```shell
-.venv\Scripts\activate
-py -m consumers.json_consumer_case
-```
-
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m consumers.json_consumer_case
+python3 -m consumers.json_consumer_jaya
 ```
 
 What did we name the topic used with JSON data? 
@@ -84,28 +66,18 @@ Hint: See the consumer code and [.env](.env).
 ## Task 7. Start a CSV Producer
 
 Follow a similar process to start the csv producer. 
-You will need to:
-1. Open a new terminal. 
-2. Activate your .venv.
-3. Know the command that works on your machine to execute python (e.g. py or python3).
-4. Know how to use the -m (module flag to run your file as a module).
-5. Know the full name of the module you want to run. Hint: Look in the producers folder.
-
-What did we name the topic used with csv data? 
-Hint: See the producer code and [.env](.env).
+Mac/Linux:
+```zsh
+source .venv/bin/activate
+python3 -m consumers.csv_producer_jaya
+```
 
 ## Task 8. Start a CSV Consumer
-
-Follow a similar process to start the csv consumer. 
-You will need to:
-1. Open a new terminal. 
-2. Activate your .venv.
-3. Know the command that works on your machine to execute python (e.g. py or python3).
-4. Know how to use the -m (module flag to run your file as a module).
-5. Know the full name of the module you want to run. Hint: Look in the consumers folder.
-
-What did we name the topic used with csv data? 
-Hint: See the consumer code and [.env](.env).
+Mac/Linux:
+```zsh
+source .venv/bin/activate
+python3 -m consumers.csv_consumer_jaya
+```
 
 ## About the Smart Smoker (CSV Example)
 
